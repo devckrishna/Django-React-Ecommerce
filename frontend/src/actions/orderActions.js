@@ -49,7 +49,7 @@ export const createOrder = (order) => async (dispatch, getState) => {
         }
 
         const { data } = await axios.post(
-            `/api/orders/add/`,
+            `https://ecomejdev.herokuapp.com/api/orders/add/`,
             order,
             config
         )
@@ -96,7 +96,7 @@ export const getOrderDetails = (id) => async (dispatch, getState) => {
         }
 
         const { data } = await axios.get(
-            `/api/orders/${id}/`,
+            `https://ecomejdev.herokuapp.com/api/orders/${id}/`,
             config
         )
 
@@ -136,7 +136,7 @@ export const payOrder = (id, paymentResult) => async (dispatch, getState) => {
         }
 
         const { data } = await axios.put(
-            `/api/orders/${id}/pay/`,
+            `https://ecomejdev.herokuapp.com/api/orders/${id}/pay/`,
             paymentResult,
             config
         )
@@ -176,7 +176,7 @@ export const deliverOrder = (order) => async (dispatch, getState) => {
         }
 
         const { data } = await axios.put(
-            `/api/orders/${order._id}/deliver/`,
+            `https://ecomejdev.herokuapp.com/api/orders/${order._id}/deliver/`,
             {},
             config
         )
@@ -217,7 +217,7 @@ export const listMyOrders = () => async (dispatch, getState) => {
         }
 
         const { data } = await axios.get(
-            `/api/orders/myorders/`,
+            `https://ecomejdev.herokuapp.com/api/orders/myorders/`,
             config
         )
 
@@ -256,7 +256,7 @@ export const listOrders = () => async (dispatch, getState) => {
         }
 
         const { data } = await axios.get(
-            `/api/orders/`,
+            `https://ecomejdev.herokuapp.com/api/orders/`,
             config
         )
 
